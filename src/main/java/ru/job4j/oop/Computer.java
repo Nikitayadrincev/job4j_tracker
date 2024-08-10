@@ -6,9 +6,6 @@ public class Computer {
     private String cpu;
 
     public Computer() {
-        multiMonitor = true;
-        ssd = 500;
-        cpu = "Intel Core I7-10700K";
     }
 
     public Computer(boolean multiMonitor, int ssd, String cpu) {
