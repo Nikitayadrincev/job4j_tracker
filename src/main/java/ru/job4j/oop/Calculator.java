@@ -11,7 +11,7 @@ public class Calculator {
         return x * a;
     }
 
-    public static int divide(int a) {
+    public int divide(int a) {
         return a / x;
     }
 
@@ -25,10 +25,11 @@ public class Calculator {
         Calculator calculator1 = new Calculator();
         int resultMultiply = calculator1.multiply(10);
         System.out.println("resultMultiply: " + resultMultiply);
-        int resultDivide = Calculator.divide(10);
-        System.out.println("resultDivide: " + resultDivide);
         Calculator calculator2 = new Calculator();
-        int resultSumAll = calculator2.sumAllOperations(10);
+        int resultDivide = calculator2.divide(10);
+        System.out.println("resultDivide: " + resultDivide);
+        Calculator calculator3 = new Calculator();
+        int resultSumAll = calculator3.sumAllOperations(10);
         System.out.println("resultSumAll: " + resultSumAll);
     }
 }
