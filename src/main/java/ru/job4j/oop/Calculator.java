@@ -7,6 +7,10 @@ public class Calculator {
         return x + a;
     }
 
+    public static int minus(int a) {
+        return a - x;
+    }
+
     public int multiply(int a) {
         return x * a;
     }
@@ -16,12 +20,14 @@ public class Calculator {
     }
 
     public int sumAllOperations(int a) {
-        return divide(a) + multiply(a) + sum(a);
+        return divide(a) + multiply(a) + sum(a) + minus(a);
     }
 
     public static void main(String[] args) {
         int resultSum = Calculator.sum(10);
         System.out.println("resultSum: " + resultSum);
+        int resultMinus = Calculator.minus(10);
+        System.out.println("resultSum: " + resultMinus);
         Calculator calculator1 = new Calculator();
         int resultMultiply = calculator1.multiply(10);
         System.out.println("resultMultiply: " + resultMultiply);
