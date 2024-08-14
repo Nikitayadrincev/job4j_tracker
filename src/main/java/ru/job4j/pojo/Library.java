@@ -14,21 +14,17 @@ public class Library {
         Book cleanCode = new Book("Clean code", 150);
         Book chemistry = new Book("Chemistry", 432);
         Book[] books = new Book[]{history, geography, cleanCode, chemistry};
-        for (int index = 0; index < books.length; index++) {
-            Book book = books[index];
+        for (Book book : books) {
             System.out.println(book.getName() + " - " + book.getNumberOfPages());
         }
         swap(books, 0, 3);
-        for (int index = 0; index < books.length; index++) {
-            Book book = books[index];
+        for (Book book : books) {
             System.out.println(book.getName() + " - " + book.getNumberOfPages());
         }
-        for (int index = 0; index < books.length; index++) {
-            Book book = books[index];
-            if (book.getName().equals("Clean code")) {
+        for (Book book : books) {
+            if ("Clean code".equals(book.getName())) {
                 System.out.println(book.getName() + " - " + book.getNumberOfPages());
             }
-
         }
     }
 }
