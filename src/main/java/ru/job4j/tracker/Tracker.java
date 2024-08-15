@@ -55,19 +55,19 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        boolean result = false;
         int index = indexOf(id);
-        if (index != -1) {
+        boolean result = index != -1;
+        if (result) {
             items[index].setName(item.getName());
-            result = true;
         }
         return result;
     }
 
     public void delete(int id) {
-        int res = indexOf(id);
-        if (res != -1) {
-            System.arraycopy(items, res + 1, items, res, size - res - 1);
+        int index = indexOf(id);
+        boolean result = index != -1;
+        if (result) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
             size--;
         }
     }
