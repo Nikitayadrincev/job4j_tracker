@@ -42,23 +42,15 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        Item[] result = new Item[size];
-        int j = 0;
-        for (int i = 0; i < size; i++) {
-            Item name = items[i];
-            if (name != null) {
-                result[j] = name;
-                j++;
-            }
-        }
-        return Arrays.copyOf(result, j);
+        return Arrays.copyOf(items, size);
     }
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
         boolean result = index != -1;
         if (result) {
-            items[index].setName(item.getName());
+            items[index] = item;
+            items[index].setId(id);
         }
         return result;
     }
@@ -68,6 +60,7 @@ public class Tracker {
         boolean result = index != -1;
         if (result) {
             System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
             size--;
         }
     }
