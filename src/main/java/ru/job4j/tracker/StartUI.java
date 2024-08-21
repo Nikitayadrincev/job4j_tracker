@@ -77,8 +77,6 @@ public class StartUI {
     }
 
     public static void createItem(Input input, Tracker tracker) {
-        System.out.println("");
-        System.out.print("");
         String name = input.askStr("=== Создание новой заявки === \nВведите имя: ");
         Item item = new Item(name);
         tracker.add(item);
