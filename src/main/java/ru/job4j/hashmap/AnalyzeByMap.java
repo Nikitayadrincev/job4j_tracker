@@ -5,14 +5,13 @@ import java.util.*;
 public class AnalyzeByMap {
     public static double averageScore(List<Pupil> pupils) {
         double averagScore = 0D;
-        int countPupil = 0;
+
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 averagScore += (double) subject.score() / pupil.subjects().size();
             }
-            countPupil++;
         }
-        return averagScore / countPupil;
+        return averagScore / pupils.size();
     }
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
