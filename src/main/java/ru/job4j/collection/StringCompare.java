@@ -13,11 +13,8 @@ public class StringCompare implements Comparator<String> {
                 return result;
             }
         }
-        if (left.length() < right.length()) {
-            result = Character.compare(' ', right.charAt(left.length()));
-        }
-        if (left.length() > right.length()) {
-            result = Character.compare(left.charAt(right.length()), ' ');
+        if (left.length() != right.length()) {
+            result = Integer.compare(left.length(), right.length());
         }
 
         return result;
